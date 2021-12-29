@@ -61,21 +61,28 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   Container(
                     height: Get.height * 0.27,
                   ),
-                  SizedBox(height: 6),
-                  descContainer(),
-                  SizedBox(height: 6),
-                  AnimatedSwitcher(
-                    duration: Duration(seconds: 1),
-                    child: [
-                      infoDailog(),
-                      emptyContainer(),
-                      emptyContainer(),
-                      emptyContainer(),
-                      emptyContainer(),
-                      emptyContainer(),
-                      emptyContainer(),
-                      emptyContainer(),
-                    ][curindex],
+                  Container(
+                    color: primaryColor,
+                    child: Column(
+                      children: [
+                        SizedBox(height: 6),
+                        descContainer(),
+                        SizedBox(height: 6),
+                        AnimatedSwitcher(
+                          duration: Duration(seconds: 1),
+                          child: [
+                            infoDailog(),
+                            emptyContainer(),
+                            emptyContainer(),
+                            emptyContainer(),
+                            emptyContainer(),
+                            emptyContainer(),
+                            emptyContainer(),
+                            emptyContainer(),
+                          ][curindex],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
